@@ -1,0 +1,13 @@
+{% extends "blank_layout.html" %}
+{% load static %}
+{% block content %}
+<h1>List_Movies</h1>
+
+{%for movie in movies%}
+<h1>Title : {{movie.title | upper}} </h1>
+<p>Summay : {{movie.discription | default:"No Data Available"}}</p>
+<h4>Year : {{movie.year}}</h4>
+<p>Movie was flope</p>
+{%endfor%}
+
+{% endblock content %}
